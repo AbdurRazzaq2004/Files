@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+#metadata for replicaSet
+metadata:
+  name: frontend
+  #labels of ReplicaSet
+  labels:
+    app: guestbook
+    tier: frontend
+    #spec secion for ReplicaSet
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+      #template for defining pod
+  template:
+    metadata:
+      labels:
+        tier: frontend
+        #spec section of pod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2

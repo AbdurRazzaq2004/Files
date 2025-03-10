@@ -1,0 +1,5 @@
+error in "pod.yml" and "deployment.yml" are due to resource limit so by
+adding/mentioning resource the error are solved !!
+
+-----
+
